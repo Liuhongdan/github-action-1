@@ -1,4 +1,4 @@
-name: node-bats
+# name: node-bats
 run-name: ${{github.actor}} is running ${{github.workflow}}
 on: [push, workflow_dispatch]
 jobs:
