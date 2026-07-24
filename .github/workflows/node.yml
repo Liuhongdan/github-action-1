@@ -1,0 +1,13 @@
+name: node-bats
+run-name: ${{github.actor}} is running ${{github.workflow}}
+on: [push, workflow_dispatch]
+jobs:
+  check-bats-version:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v6
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+      - run: npm install -g bats
+      - run: bats -v
