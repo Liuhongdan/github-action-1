@@ -10,6 +10,6 @@ jobs:
       - name: display secret
         env:
           SECRETS_CONTEXT: ${{ toJson(secrets) }}
-        run: echo ${{SECRETS_CONTEXT}}
+        run: echo $SECRETS_CONTEXT
       - name: Print Goodbye
         run: echo "Done - Bye!"
