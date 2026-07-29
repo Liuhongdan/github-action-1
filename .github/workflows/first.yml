@@ -1,1 +1,21 @@
+name: first
 
+on: [push]
+
+jobs:
+    job1:
+        name: First Job
+        runs-on: ubuntu-latest
+        steps:
+            - name: step one
+              uses: actions/checkout@v4
+            - name: step two
+              run: env | sort
+    job2:
+        name: Second Job
+        runs-on: windows-latest
+        stesp:
+            - name: step one
+              uses: actions/checkout@v4
+            - name: step two
+              run: "Get-CholdItem Env: | Sort-Object Name"
